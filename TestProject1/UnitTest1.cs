@@ -11,14 +11,47 @@ namespace TesteTrabalhoTrio
         {
 
             //cenario
-            int tamanhoCantoneira = 5;
+            int tamanhoCantoneira = 3;
 
             Cantoneira cantoneira = new Cantoneira();
             //acao
-            string resultado = cantoneira.CantoneiraConstrutor(tamanhoCantoneira);
+            int resultado = cantoneira.CantoneiraConstrutor(tamanhoCantoneira);
 
             //verificação
-            Assert.AreEqual("1,1,2,1,2,3,1,2,3,4,1,2,3,4,5", resultado);
+            Assert.AreEqual(10, resultado);
+
+        }
+
+        [TestMethod]
+        public void TestCalculaSoma()
+        {
+
+            //cenario
+            int a = 3;
+            int b = 3;
+
+            Calcula calcula = new Calcula();
+            //acao
+            int resultado = calcula.Soma(a,b);
+
+            //verificação
+            Assert.AreEqual(6, resultado);
+
+        }
+
+        [TestMethod]
+        public void TestConverteMetro()
+        {
+
+            //cenario
+            Decimal metros = 3;
+
+            Converte converte = new Converte();
+            //acao
+            Decimal resultado = converte.MetroParaMilimetro(metros);
+
+            //verificação
+            Assert.AreEqual(3000, resultado);
 
         }
     }
