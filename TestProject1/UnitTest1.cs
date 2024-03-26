@@ -17,7 +17,7 @@ namespace TesteTrabalhoTrio
             //acao
             int resultado = cantoneira.CantoneiraConstrutor(tamanhoCantoneira);
 
-            //verificação
+            //verificaÃ§Ã£o
             Assert.AreEqual(10, resultado);
 
         }
@@ -34,7 +34,7 @@ namespace TesteTrabalhoTrio
             //acao
             int resultado = calcula.Soma(a,b);
 
-            //verificação
+            //verificaÃ§Ã£o
             Assert.AreEqual(6, resultado);
 
         }
@@ -50,9 +50,20 @@ namespace TesteTrabalhoTrio
             //acao
             Decimal resultado = converte.MetroParaMilimetro(metros);
 
-            //verificação
+            //verificaÃ§Ã£o
             Assert.AreEqual(3000, resultado);
 
+        }
+
+        [TestMethod]
+        public void TestMethod1()
+        {
+            float salario = 8000;
+
+            var impostoDeRenda = new impostoLeao();
+
+            float resultado = impostoDeRenda.CalculoImposto(salario);
+            Assert.AreEqual(6696, resultado);
         }
     }
 }
