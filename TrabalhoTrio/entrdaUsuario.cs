@@ -7,7 +7,7 @@ Console.WriteLine("Bem vindo ao programa de testes:");
 bool continua = true;
 do 
 {
-    Console.WriteLine("Digite 0 para sair\nDigite 1 para somar dois numeros\nDigite 2 para converter metro em milimetro\nDigite 3 para criar uma cantoneira");
+    Console.WriteLine("Digite 0 para sair\nDigite 1 para somar dois numeros\nDigite 2 para converter metro em milimetro\nDigite 3 para criar uma cantoneira\nDigite 4 para calcular o imposto de renda");
     int resposta = int.Parse(Console.ReadLine());
     switch (resposta)
     {
@@ -34,6 +34,11 @@ do
             Cantoneira cantoneira = new Cantoneira();
             Console.WriteLine(cantoneira.CantoneiraConstrutor(tamanhoCantoneira));
             break;
+        case 4:
+            Console.Write("Digite sua renda mensal:");
+            float salario = float.Parse(Console.ReadLine());
+            var impostoDeRenda = new impostoLeao();
+            Console.WriteLine($"O salário após o desconto é: {impostoDeRenda.CalculoImposto(salario)}");
 
     }
 
