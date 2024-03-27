@@ -1,12 +1,12 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace impostoDeRenda
+namespace TrabalhoTrio
 {
-    public class impostoLeao
+    public class ImpostoLeao
     {
         public float CalculoImposto(float salario)
         {
@@ -16,6 +16,7 @@ namespace impostoDeRenda
             if (salario <= 2259.20f)
             {
                 imposto = 0;
+                resultado = salario;
             }
             else if (salario <= 2826.66f)
             {
