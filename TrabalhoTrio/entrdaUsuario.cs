@@ -1,4 +1,4 @@
-﻿
+
 
 using System.Linq.Expressions;
 using TrabalhoTrio;
@@ -37,9 +37,9 @@ do
         case 4:
             Console.Write("Digite sua renda mensal:");
             float salario = float.Parse(Console.ReadLine());
-            var impostoDeRenda = new impostoLeao();
-            Console.WriteLine($"O salário após o desconto é: {impostoDeRenda.CalculoImposto(salario)}");
-
+            ImpostoLeao impostoLeao = new ImpostoLeao();
+            Console.WriteLine($"O salário após o desconto é: {impostoLeao.CalculoImposto(salario)}");
+            break;
     }
 
-}while(continua == true);
+} while(continua == true);
