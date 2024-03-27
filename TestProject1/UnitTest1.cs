@@ -56,13 +56,13 @@ namespace TesteTrabalhoTrio
         }
 
         [TestMethod]
-        public void TestMethod1()
+        public void TesteImposto()
         {
             float salario = 8000;
 
-            var impostoDeRenda = new impostoLeao();
+            ImpostoLeao impostoLeao = new ImpostoLeao();
 
-            float resultado = impostoDeRenda.CalculoImposto(salario);
+            float resultado = impostoLeao.CalculoImposto(salario);
             Assert.AreEqual(6696, resultado);
         }
     }
