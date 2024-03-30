@@ -32,13 +32,15 @@ do
             Console.WriteLine("Informe tamanho da cantoneira");
             int tamanhoCantoneira = int.Parse(Console.ReadLine());
             Cantoneira cantoneira = new Cantoneira();
-            Console.WriteLine(cantoneira.CantoneiraConstrutor(tamanhoCantoneira));
+            cantoneira.CantoneiraConstrutor(tamanhoCantoneira);
             break;
         case 4:
             Console.Write("Digite sua renda mensal:");
-            float salario = float.Parse(Console.ReadLine());
+            decimal salario = decimal.Parse(Console.ReadLine());
+            Console.Write("Caso possua filhos digite quantos:");
+            int filhos = int.Parse(Console.ReadLine());
             ImpostoLeao impostoLeao = new ImpostoLeao();
-            Console.WriteLine($"O salário após o desconto é: {impostoLeao.CalculoImposto(salario)}");
+            Console.WriteLine($"O salário após o desconto é: {impostoLeao.CalculoImposto(salario, filhos):f2}");
             break;
     }
 

@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TrabalhoTrio\TrabalhoTrio.csproj" />
+    <ProjectReference Include="..\TrabalhoTrio\Classes.csproj" />
   </ItemGroup>
 
   <ItemGroup>

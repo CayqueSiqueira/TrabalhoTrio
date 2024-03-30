@@ -8,37 +8,53 @@ namespace TrabalhoTrio
 {
     public class ImpostoLeao
     {
-        public float CalculoImposto(float salario)
+        public decimal CalculoImposto(decimal salario, int filhos)
         {
-            float imposto = 0;
-            float resultado = 0;
+            decimal imposto = 0;
+            decimal resultado = 0;
             
-            if (salario <= 2259.20f)
+            if (salario <= 1903.98m)
             {
                 imposto = 0;
                 resultado = salario;
             }
-            else if (salario <= 2826.66f)
+            else if (salario <= 2826.65m)
             {
-                imposto = salario * 0.075f;
-                resultado = salario - imposto + 169.44f;
+                imposto = (salario * 0.075m) - (169.44m * filhos);
+                if(imposto < 0)
+                {
+                    imposto = 0;
+                }
+                resultado = salario - imposto;
             }
-            else if (salario <= 3751.05f)
+            else if (salario <= 3751.05m)
             {
-                imposto = salario * 0.15f;
-                resultado = salario - imposto + 381.44f;
+                imposto = (salario * 0.15m) - (381.44m * filhos);
+                if (imposto < 0)
+                {
+                    imposto = 0;
+                }
+                resultado = salario - imposto;
 
             }
-            else if (salario <= 4664.68f)
+            else if (salario <= 4664.68m)
             {
-                imposto = salario * 0.225f;
-                resultado = salario - imposto + 662.77f;
+                imposto = (salario * 0.225m) - (662.77m * filhos);
+                if (imposto < 0)
+                {
+                    imposto = 0;
+                }
+                resultado = salario - imposto;
 
             }
             else
             {
-                imposto = salario * 0.275f;
-                resultado = salario - imposto + 896.00f;
+                imposto = (salario * 0.275m) - (896.00m * filhos);
+                if (imposto < 0)
+                {
+                    imposto = 0;
+                }
+                resultado = salario - imposto;
             }
             return resultado;
         }

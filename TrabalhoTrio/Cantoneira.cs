@@ -6,40 +6,26 @@ namespace TrabalhoTrio
 {
     public class Cantoneira
     {
-        public int CantoneiraConstrutor(int tamanhoCantoneira)
+        public void CantoneiraConstrutor(int tamanhoCantoneira)
         {
-            int gabarito = 0;
+            string linha = null;
             for (int coluna = 0; coluna < tamanhoCantoneira; coluna++)
             {
-                for (int linha = 0; linha < tamanhoCantoneira; linha++)
-                {
 
-                    if (linha > coluna)
-                    {
-                        break;
-                    }
-                    Console.Write(linha + 1);
-                    gabarito = gabarito + (linha + 1);
-
-                    //if(linha + 1 == tamanhoCantoneira)
-                    //{
-                    //    gabarito = gabarito + (linha + 1);
-                    //}
-                    //else
-                    //{
-                    //    gabarito = gabarito + (linha + 1) + ',';
-                    //}
-
-
-                }
-                Console.WriteLine();
-
+                    linha = linha + (coluna + 1);
+                    Console.WriteLine(linha);
+                
             }
+        }
 
+        public int ValidaCantoneira(int tamanhoCantoneira)
+        {
+            int gabarito = 0;
+            for (int i = 0; i < tamanhoCantoneira;i++)
+            {
+                gabarito = gabarito + (i + 1);
+            }
             return gabarito;
-
-
-
         }
     }
 
