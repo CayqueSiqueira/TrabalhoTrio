@@ -8,7 +8,7 @@ namespace TrabalhoTrio
     {
         public void CantoneiraConstrutor(int tamanhoCantoneira)
         {
-            string linha = null;
+            string linha = "1";
             for (int coluna = 0; coluna < tamanhoCantoneira; coluna++)
             {
 
